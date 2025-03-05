@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC471F0C-A1E9-4585-B159-8541C8831C80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TFG</RootNamespace>
+    <AssemblyName>TFG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\AppointmentDTO.cs" />
+    <Compile Include="BD\Appointments.cs" />
+    <Compile Include="BD\MedicationDTO.cs" />
+    <Compile Include="BD\MedicationHistory.cs" />
+    <Compile Include="BD\Medications.cs" />
+    <Compile Include="BD\Mood.cs" />
+    <Compile Include="BD\MoodDTO.cs" />
+    <Compile Include="BD\Notifications.cs" />
+    <Compile Include="BD\PhysicalActivity.cs" />
+    <Compile Include="BD\PhysicalActivityDTO.cs" />
+    <Compile Include="BD\Reminders.cs" />
+    <Compile Include="BD\RemindersDTO.cs" />
+    <Compile Include="BD\Users.cs" />
+    <Compile Include="BD\Usersettings.cs" />
+    <Compile Include="Fecha\CustomDateConverter.cs" />
+    <Compile Include="Interfaces Actividad Fisica\ActividadFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Actividad Fisica\ActividadFisica.Designer.cs">
+      <DependentUpon>ActividadFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Actividad Fisica\CRActividadFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Actividad Fisica\CRActividadFisica.Designer.cs">
+      <DependentUpon>CRActividadFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Alarmas\Alarmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Alarmas\Alarmas.Designer.cs">
+      <DependentUpon>Alarmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Alarmas\CRAlarmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Alarmas\CRAlarmas.Designer.cs">
+      <DependentUpon>CRAlarmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Consultas Medicas\ConsultasMedicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Consultas Medicas\ConsultasMedicas.Designer.cs">
+      <DependentUpon>ConsultasMedicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Consultas Medicas\CRConsultasMedicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Consultas Medicas\CRConsultasMedicas.Designer.cs">
+      <DependentUpon>CRConsultasMedicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Estado Animo\CREstadoAnimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Estado Animo\CREstadoAnimo.Designer.cs">
+      <DependentUpon>CREstadoAnimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Estado Animo\EstadoAnimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Estado Animo\EstadoAnimo.Designer.cs">
+      <DependentUpon>EstadoAnimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Medicamentos\CRMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Medicamentos\CRMedicamento.Designer.cs">
+      <DependentUpon>CRMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerados\Dias.cs" />
+    <Compile Include="Enumerados\Estado.cs" />
+    <Compile Include="Enumerados\EstadoMental.cs" />
+    <Compile Include="Enumerados\Frecuencia.cs" />
+    <Compile Include="Enumerados\Tipo.cs" />
+    <Compile Include="Enumerados\TipoActividad.cs" />
+    <Compile Include="InterfazPrincipal\FormLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazPrincipal\FormLogo.Designer.cs">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Usuarios\CRUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Usuarios\CRUsuarios.Designer.cs">
+      <DependentUpon>CRUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Usuarios\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Usuarios\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces Medicamentos\Medicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces Medicamentos\Medicamentos.Designer.cs">
+      <DependentUpon>Medicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazPrincipal\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazPrincipal\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion API\WebConsumer.cs" />
+    <EmbeddedResource Include="Interfaces Actividad Fisica\ActividadFisica.resx">
+      <DependentUpon>ActividadFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Actividad Fisica\CRActividadFisica.resx">
+      <DependentUpon>CRActividadFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Alarmas\Alarmas.resx">
+      <DependentUpon>Alarmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Alarmas\CRAlarmas.resx">
+      <DependentUpon>CRAlarmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Consultas Medicas\ConsultasMedicas.resx">
+      <DependentUpon>ConsultasMedicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Consultas Medicas\CRConsultasMedicas.resx">
+      <DependentUpon>CRConsultasMedicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Estado Animo\CREstadoAnimo.resx">
+      <DependentUpon>CREstadoAnimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Estado Animo\EstadoAnimo.resx">
+      <DependentUpon>EstadoAnimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Medicamentos\CRMedicamento.resx">
+      <DependentUpon>CRMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazPrincipal\FormLogo.resx">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Usuarios\CRUsuarios.resx">
+      <DependentUpon>CRUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Usuarios\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces Medicamentos\Medicamentos.resx">
+      <DependentUpon>Medicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazPrincipal\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Configuracion API\Administracion.cs" />
+    <Compile Include="Login\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\videoplayback.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Pill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\power off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Caduceus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\calendarMedication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cuadrado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Horizontal Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\maxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Membresia.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Minimize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\maximize2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Dashboard.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Alarm1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MedMonitor</string>
+    <string name="add_consulta">Añadir Consulta</string>
+    <string name="add_mood">Añadir Estado de Ánimo</string>
+    <string name="add_activity">Añadir Actividad</string>
+    <string name="consulta_image_description">Imagen de la consulta médica</string>
+    <string name="add_medication">Añadir Medicamento</string>
+    <string-array name="estado_opciones">
+        <item>Pendiente</item>
+    </string-array>
+    <string-array name="tipos_actividad_fisica">
+        <item>Caminar</item>
+        <item>Correr</item>
+        <item>Nadar</item>
+        <item>Ciclismo</item>
+        <item>Otro</item>
+    </string-array>
+    <string-array name="estado_animo_opciones">
+        <item>Feliz</item>
+        <item>Triste</item>
+        <item>Ansioso</item>
+        <item>Neutral</item>
+    </string-array>
+    <string-array name="activity_types">
+        <item>Correr</item>
+        <item>Caminar</item>
+        <item>Natación</item>
+        <item>Ciclismo</item>
+        <item>Yoga</item>
+    </string-array>
+    <string-array name="mood_states">
+        <item>Feliz</item>
+        <item>Triste</item>
+        <item>Enfadado</item>
+        <item>Ansioso</item>
+    </string-array>
+</resources>

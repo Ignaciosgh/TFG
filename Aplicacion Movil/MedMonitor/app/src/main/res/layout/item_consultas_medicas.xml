@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Contenedor principal de texto e imagen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Imagen a la izquierda -->
+            <ImageView
+                android:id="@+id/consultaImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/btn2"
+                android:contentDescription="@string/consulta_image_description" />
+
+            <!-- Contenedor de texto -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Título de la consulta -->
+                <TextView
+                    android:id="@+id/consultaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consulta Medica"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Fecha y Hora -->
+                <TextView
+                    android:id="@+id/consultaDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha: 2024-11-20 | Hora: 10:00 AM"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Motivo -->
+                <TextView
+                    android:id="@+id/consultaMotivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Motivo: Revisión general"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray" />
+
+                <!-- Estado -->
+                <TextView
+                    android:id="@+id/consultaStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Estado: Pendiente"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Contenedor para los botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/markCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completada"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/editConsulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/dark_blue"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/eliminarConsulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                android:textSize="14sp"
+                android:backgroundTint="@color/red"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

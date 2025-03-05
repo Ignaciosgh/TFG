@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:background="@color/dark_blue">
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:paddingBottom="32dp"/>
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="300dp"
+        android:layout_height="270dp"
+        android:src="@drawable/logo1"
+        android:contentDescription="App Logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <EditText
+        android:id="@+id/nameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre Completo"
+        android:padding="16dp"
+        android:backgroundTint="@color/light_gray"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/emailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:backgroundTint="@color/light_gray"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/passwordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:backgroundTint="@color/light_gray"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:backgroundTint="@color/light_blue"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/redirectToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Ya tienes una cuenta? Inicia sesión"
+        android:textColor="@color/light_blue"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

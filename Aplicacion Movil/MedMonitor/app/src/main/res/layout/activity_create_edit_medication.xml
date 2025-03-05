@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activities.CreateEditMedicationActivity">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicamentos"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Nombre -->
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del medicamento"
+                android:inputType="text"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="15dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Descripción -->
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Días de la semana -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Días de la Semana"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroupDias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:singleSelection="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLunes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="L"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMartes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="M"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMiercoles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="X"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnJueves"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="J"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViernes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="V"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSabado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="S"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDomingo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D"
+                    android:gravity="center"
+                    style="@style/CustomButtonStyle" />
+
+
+
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <!-- Estado -->
+            <Spinner
+                android:id="@+id/spEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="15dp"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/estado_opciones"/>
+
+            <!-- Comprimidos -->
+            <EditText
+                android:id="@+id/etComprimidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cantidad de comprimidos"
+                android:inputType="number"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="15dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Veces al día -->
+            <EditText
+                android:id="@+id/etVecesDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Veces al día"
+                android:inputType="number"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="15dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Horas -->
+            <EditText
+                android:id="@+id/etHoras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Horas (separadas por comas, ej: 08:00,14:00)"
+                android:inputType="text"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="15dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:text="Guardar"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
+                    android:text="Cancelar"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

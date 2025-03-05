@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "877707072173",
+    "project_id": "mhmoniror",
+    "storage_bucket": "mhmoniror.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877707072173:android:8bfe029c0fe400e1492c24",
+        "android_client_info": {
+          "package_name": "es.ua.eps.medmonitor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbE_zRkBF48hnvOl51r5ch1gsxECile7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
