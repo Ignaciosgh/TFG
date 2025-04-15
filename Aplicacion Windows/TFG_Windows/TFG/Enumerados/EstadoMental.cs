@@ -9,8 +9,8 @@ namespace TFG.Enumerados
     public enum EstadoMental
     {
         Feliz,
-        Ansioso,
         Triste,
+        Ansioso,
         Neutral
     }
 }
