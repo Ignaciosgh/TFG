@@ -33,19 +33,21 @@ class LoginActivity : AppCompatActivity() {
         //sharedPreferences.edit().clear().apply()
         val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
         val userId = sharedPreferences.getLong("userId", -1L)
+        val userName = sharedPreferences.getString("userName", "Usuario") ?: "Usuario"
 
         Log.d("LoginActivity", "Estado de sesion $isLoggedIn")
 
         if (isLoggedIn && userId != -1L) {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("userId", userId)
+            intent.putExtra("userName", userName)
             startActivity(intent)
             finish()
             return
         }
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://192.168.0.23:8089")
+            .baseUrl("https://10.162.211.108:8089")
             .addConverterFactory(GsonConverterFactory.create())
             .callbackExecutor(java.util.concurrent.Executors.newSingleThreadExecutor())
             .build()
@@ -73,10 +75,14 @@ class LoginActivity : AppCompatActivity() {
         userViewModel.loginResult.observe(this, Observer { result ->
             if (result.isSuccess) {
                 val userId = userViewModel.getUserId() ?: -1L
-                saveUserSession(userId)
+                val userName = userViewModel.getUserName() ?: "Usuario"
+                val userEmail = userViewModel.getUserEmail() ?: "Correo electronico"
+                saveUserSession(userId, userName, userEmail)
 
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("userId", userId)
+                intent.putExtra("userName", userName)
+                intent.putExtra("userEmail", userEmail)
                 startActivity(intent)
                 finish()
             } else {
@@ -90,11 +96,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveUserSession(userId: Long) {
+    private fun saveUserSession(userId: Long, userName: String, userEmail: String) {
         val sharedPreferences = getSharedPreferences("user_session", Context.MODE_PRIVATE)
         sharedPreferences.edit()
             .putBoolean("is_logged_in", true)
             .putLong("userId", userId)
+            .putString("userName", userName)
+            .putString("userEmail", userEmail)
             .apply()
     }
 

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +16,17 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_settings)
+
+        val sharedPreferences = getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        val userName = sharedPreferences.getString("userName", "Nombre no disponible")
+        val userEmail = sharedPreferences.getString("userEmail", "Correo no disponible")
+
+        val nameTextView = findViewById<TextView>(R.id.textName)
+        val emailTextView = findViewById<TextView>(R.id.textEmail)
+
+        nameTextView.text = userName
+        emailTextView.text = userEmail
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

@@ -38,11 +38,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val userId = intent.getLongExtra("userId", -1L)
+        val saludoTextView = findViewById<TextView>(R.id.textView)
+        val nombreUsuario = intent.getStringExtra("userName") ?: "Usuario"
+        saludoTextView.text = "Hola, $nombreUsuario"
 
         createNotificationChannel(this)
 
         if (userId != -1L) {
             Toast.makeText(this, "Usuario ID: $userId", Toast.LENGTH_SHORT).show()
+            val saludoTextView = findViewById<TextView>(R.id.textView)
+            val nombreUsuario = intent.getStringExtra("userName") ?: "Usuario"
+            saludoTextView.text = "Hola, $nombreUsuario"
         } else {
             Toast.makeText(this, "ID no disponible", Toast.LENGTH_SHORT).show()
         }

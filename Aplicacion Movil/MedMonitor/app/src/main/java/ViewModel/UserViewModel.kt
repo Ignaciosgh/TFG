@@ -73,7 +73,7 @@ class UserViewModel(
     private fun saveUserName(userName: String) {
         val sharedPreferences = application.getSharedPreferences("user_session", Context.MODE_PRIVATE)
         sharedPreferences.edit()
-            .putString("username", userName)
+            .putString("userName", userName)
             .apply()
     }
 
@@ -93,6 +93,16 @@ class UserViewModel(
     fun getUserId(): Long {
         val sharedPreferences = application.getSharedPreferences("user_session", Context.MODE_PRIVATE)
         return sharedPreferences.getLong("userId", -1L)
+    }
+
+    fun getUserName(): String? {
+        val sharedPreferences = application.getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        return sharedPreferences.getString("userName", null)
+    }
+
+    fun getUserEmail(): String? {
+        val sharedPreferences = application.getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        return sharedPreferences.getString("userEmail", null)
     }
 
     fun logout() {

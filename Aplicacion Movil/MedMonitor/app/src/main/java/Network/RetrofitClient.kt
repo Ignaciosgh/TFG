@@ -18,7 +18,7 @@ import java.time.LocalTime
 
 object RetrofitClient {
 
-    private const val BASE_URL = "http://192.168.0.23:8089"
+    private const val BASE_URL = "http://10.162.211.108:8089"
 
     private val logging = HttpLoggingInterceptor().apply {
         setLevel(HttpLoggingInterceptor.Level.BODY)

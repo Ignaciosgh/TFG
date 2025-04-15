@@ -62,7 +62,7 @@ class ReminderWorker(
     private fun showNotification(title: String, details: String) {
         val channelId = "reminder_notifications"
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.notification) // Cambia por tu ícono
+            .setSmallIcon(R.drawable.notification) // Cambia tu ícono
             .setContentTitle(title)
             .setContentText(details)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
